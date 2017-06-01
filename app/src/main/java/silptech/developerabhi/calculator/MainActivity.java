@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView result;
-    Button one, two, three, four, five, six, equals, seven, eight, nine, zero, add, sub, mul, div, dot, clr;
+    Button one, two, three, four, five, six, equals, seven, eight, nine, zero, add, sub, mul, div, dot, clr, back;
     int dotClick = 0;
     double firstdigit, seconddigit, finaldigit;
     int operatorclick = 0;
@@ -36,8 +36,15 @@ public class MainActivity extends AppCompatActivity {
         dot = (Button) findViewById(R.id.btndot);
         clr = (Button) findViewById(R.id.btnclr);
         equals = (Button) findViewById(R.id.btnequal);
+        back = (Button) findViewById(R.id.back);
         result = (TextView) findViewById(R.id.resultdisplay);
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = result.getText().toString();
+                result.setText(s.substring(0, s.length() - 1));
+            }
+        });
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -239,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
                     firstdigit = firstdigit / seconddigit;
                     result.setText("");
                 }
-                p=4;
+                p = 4;
             }
 
         });
