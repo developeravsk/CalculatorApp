@@ -24,3 +24,6 @@ for youtube parsing
       @GET("youtube/v3/playlistItems")
     Call<Example> getData(@Query("part") String part, @Query("fields") String field, @Query("maxResults") String maxResults, @Query("playlistId") String playlistid, @Query("key") String key);
 
+
+
+https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,status&fields=nextPageToken,items(snippet(publishedAt,title,resourceId,thumbnails),status)&maxResults=50&playlistId=PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-&key=AIzaSyAJ7XL6febb9L2PNpiiIrmrG-dJNOGfZ9g
