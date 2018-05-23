@@ -11,7 +11,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSd4oaIsWSCnwBNsVEKabrnWIgpyQ3KMmVxQAiF5
 
 for youtube parsing
 
-String part = "snippet,status";
+     String part = "snippet,status";
     String fieds = "nextPageToken,items(snippet(publishedAt,title,resourceId,thumbnails),status)";
     String playlistid = "PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-";
     String maxresults = "50";
